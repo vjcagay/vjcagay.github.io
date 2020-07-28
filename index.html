@@ -1,62 +1,136 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>VJ Cagay</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet" type="text/css">
-        <style>
-            html, body {
-                font-family: "Fira Sans", sans-serif;
-                font-size: 16px;
-                display: table;
-                height: 100%;
-                width: 100%;
-                color: white;
-            }
+  <head>
+    <title>VJ Cagay</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.13.1/Inter (web)/inter.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <style>
+    body {
+      background: #f8f8f9;
+      padding: 48px;
+    }
 
-            h1 {
-                font-size: 5em;
-                font-weight: 700;
-                text-shadow: 1px 3px 10px black;
-            }
+    * {
+      font-family: Inter;
+      font-size: 1.5rem;
+      color: #333333;
+    }
 
-            h4 {
-                text-shadow: 1px 3px 10px black;
-            }
+    main {
+      min-height: 100%;
+    }
 
-            .banner {
-                display: table-cell;
-                vertical-align: middle;
-                text-align: center;
-                line-height: 5em;
-            }
+    h1 {
+      color: #113654;
+      font-weight: 800;
+      font-size: 3rem;
+      padding-bottom: 3rem;
+    }
 
-            .bg {
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                background-color: black;
-                background-image: url("./bg-min.png");
-                -webkit-filter: blur(2px);
-                -moz-filter: blur(2px);
-                -ms-filter: blur(2px);
-                filter: blur(2px);
-                background-position: 50% 0%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                transform: scale(1.02, 1.02);
-            }
-        </style>
-    </head>
-    <body>
-        <div class="bg"></div>
-        <div class="banner">
-            <h4>Under construction in my local workstation,</h4>
-            <h1>Coming Soon!</h1>
-            <h4>VINCENT JOHN PALACIO CAGAY</h4>
+    p {
+      padding-bottom: 1.5rem;
+    }
+
+    b {
+      font-size: 2rem;
+    }
+
+    img {
+      width: 204px;
+      height: 204px;
+      border-radius: 50%;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      padding-bottom: 3rem;
+    }
+
+    .profile-image {
+      flex-shrink: 0;
+    }
+
+    .profile-image div {
+      position: relative;
+    }
+
+    .profile-image div::before {
+      content: " ";
+      width: 234px;
+      height: 234px;
+      position: absolute;
+      top: -16px;
+      left: -16px;
+      border: 8px dashed #dedede;
+      border-radius: 50%;
+      animation-name: rotate;
+      animation-iteration-count: infinite;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .profile-name {
+      padding: 0 0 0 48px;
+    }
+
+    @media screen and (max-width: 575px) {
+      .profile {
+        flex-direction: column;
+      }
+
+      .profile-name {
+        padding: 48px 0 0 0;
+        text-align: center;
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <h1>Hello there!</h1>
+      <div class="profile">
+        <div class="profile-image">
+          <div>
+            <img src="./me.jpg" alt="Vincent John Cagay's face" />
+          </div>
         </div>
-    </body>
+        <div class="profile-name">
+          <b>Vincent John Cagay</b>
+          <br />
+          🏡🇵🇭 ➡ 📍🇯🇵
+        </div>
+      </div>
+      <p>
+        As a software engineer working mainly on front-end web technologies,
+        <br />
+        most of my work experience involves migrating legacy systems into the
+        modern age.
+      </p>
+      <p>
+        You can find me on
+        <a href="https://www.linkedin.com/in/vjcagay/" target="_blank"
+          >Linkedin</a
+        >, <a href="https://github.com/vjcagay" target="_blank">GitHub</a>, and
+        <a href="https://gitlab.com/vjcagay" target="_blank"> GitLab</a>.
+      </p>
+      <p>You can also contact me via <a href="mailto:me@vjcagay.com">email</a>.</p>
+    </main>
+  </body>
 </html>
