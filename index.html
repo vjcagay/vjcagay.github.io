@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>VJ Cagay</title>
+    <title>Vincent John Cagay</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -9,145 +9,163 @@
       rel="stylesheet"
       type="text/css"
     />
-  </head>
-  <style>
-    body {
-      background: #f7f7f7;
-      padding: 48px;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
+    <link href="http://fonts.cdnfonts.com/css/merriweather" rel="stylesheet" />
+    <link
+      href="http://fonts.cdnfonts.com/css/source-serif-pro"
+      rel="stylesheet"
+    />
+    <link href="http://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet" />
+    <style>
+      :root {
+        --bg-default: #fff;
+        --text-default: #353535;
+        --bg-dark: #353535;
+        --text-dark: #d9d9d9;
+        --hr-default: #d9d9d9;
+      }
 
-    * {
-      font-size: 1.5rem;
-      color: #333333;
-    }
-
-    main {
-      min-height: 100%;
-    }
-
-    h1 {
-      color: #113654;
-      font-size: 3rem;
-      margin-top: 0;
-    }
-
-    b {
-      font-size: 2rem;
-    }
-
-    rt {
-      font-size: 0.75rem;
-    }
-
-    @media (prefers-color-scheme: dark) {
       body {
-        background: #1c1c1c;
+        background: var(--bg-default);
+        color: var(--text-default);
+        padding: 0 48px;
+        font-size: 18px;
       }
 
-      * {
-        color: #cccccc;
+      main {
+        max-width: 960px;
+        margin: 48px auto;
       }
 
-      h1 {
-        color: #5b91bd;
-      }
-    }
-
-    img {
-      width: 204px;
-      height: 204px;
-      border-radius: calc(204px * 0.22);
-      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .profile {
-      display: flex;
-      align-items: center;
-    }
-
-    .profile-image {
-      flex-shrink: 0;
-    }
-
-    .profile-name {
-      padding: 0 48px;
-    }
-
-    @media screen and (max-width: 959px) {
-      h1 {
+      hr {
+        border: none;
+        border-top: 1px solid var(--hr-default);
+        height: 8px;
         text-align: center;
       }
 
-      .profile {
-        flex-direction: column;
-      }
-
-      .profile-image div {
-        margin-left: 0;
-      }
-
-      .profile-name {
-        padding: 48px 0 0 0;
+      h1 {
+        font-family: "Merriweather";
+        /* font-family: "OpenDyslexic"; */
         text-align: center;
-        line-height: 2;
       }
-    }
-  </style>
+
+      p {
+        font-family: "Source Serif Pro";
+        /* font-family: "OpenDyslexic"; */
+        line-height: 1.5;
+        /* text-align: justify; */
+      }
+
+      hr + p::first-letter {
+        font-size: 400%;
+        float: left;
+        margin-right: 16px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        width: 128px;
+        filter: grayscale(1);
+        display: block;
+        margin: auto;
+      }
+
+      @media only screen and (min-width: 768px) {
+        body {
+          display: flex;
+          height: 100vh;
+        }
+
+        main {
+          margin: auto;
+          padding: 80px 0 16px 0;
+        }
+
+        img {
+          display: initial;
+          float: left;
+          margin-top: -48px;
+          filter: grayscale(1);
+        }
+
+        h1 {
+          text-align: right;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: var(--bg-dark);
+          color: var(--text-dark);
+        }
+      }
+    </style>
+  </head>
   <body>
     <main>
-      <h1>Hello there!</h1>
-        <div class="profile">
-          <div class="profile-image">
-            <div>
-              <img src="./me.jpeg" alt="Vincent John Cagay's face" />
-            </div>
-          </div>
-          <div class="profile-name">
-            <ruby>
-              <b>Cagay</b>
-              <rt>カガイ</rt>
-            </ruby>
-            &nbsp;
-            <ruby>
-              <b>Vincent</b>
-              <rt>ヴィンセント</rt>
-            </ruby>
-            &nbsp;
-            <ruby>
-              <b>John</b>
-              <rt>ジョン</rt>
-            </ruby>
-            <br />
-            <small>🏡🇵🇭&nbsp;→&nbsp;📍🇯🇵</small>
-          </div>
-        </div>
-        <p>
-          I am a software engineer leaning heavily into the frontend, with
-          most of my work experience involves migrating legacy systems into
-          the modern age.
-        </p>
-        <p>
-          I am currently interested in making mobile apps and developing with
-          accessibility ♿️ in mind.
-        </p>
-        <p>
-          You can find me on
-          <a href="https://www.linkedin.com/in/vjcagay/" target="_blank"
-            >Linkedin</a
-          >, <a href="https://github.com/vjcagay" target="_blank">GitHub</a>,
-          and
-          <a href="https://gitlab.com/vjcagay" target="_blank"> GitLab</a>.
-        </p>
-        <p>
-          You can also contact me via
-          <a href="mailto:me@vjcagay.com">email</a> and see my
-          <a href="./resume.pdf" target="_blank">resume</a>.
-        </p>
-        <p>I am based in Japan 🌸, let's meet when you're here!</p>
-      </div>
+      <img src="./me.jpeg" alt="Vincent John Cagay's photo" />
+      <h1>Vincent John Cagay</h1>
+      <hr />
+      <p>
+        I am a software engineer with over eight years of experience working in
+        the industry. Most of my work experience involves migrating legacy
+        systems and bring them into the modern age.
+      </p>
+      <p>
+        At the start of my career, I was a full-stack developer that writes
+        back-end code in PHP. When I learned of the existence of Node.js, I
+        realized that someone could write a full-stack application in just
+        JavaScript. Most of my peers were back-end developers, and the front-end
+        was the Wild Wild West of code (and still is today). Nowadays, people
+        use mobile devices, and seeing my code show up on those things made me
+        realize that front-end development could be my focus.
+      </p>
+      <p>
+        While being well-versed in making web applications, I have a keen
+        interest in mobile development. Given enough time, I also make sure the
+        code I produce is of the highest quality — well-tested, scalable, and
+        accessible.
+      </p>
+      <p>
+        Please see some of my work in
+        <a
+          href="https://github.com/vjcagay"
+          title="Link to GitHub"
+          target="_blank"
+          >GitHub</a
+        >
+        and
+        <a
+          href="https://gitlab.com/vjcagay"
+          title="Link to GitLab"
+          target="_blank"
+        >
+          GitLab</a
+        >. You may contact me via
+        <a
+          href="https://www.linkedin.com/in/vjcagay/"
+          title="Link to Linkedin"
+          target="_blank"
+          >Linkedin</a
+        >
+        or
+        <a href="mailto:me@vjcagay.com" title="Vincent John Cagay's email"
+          >email</a
+        >. You may also see my
+        <a
+          href="./resume.pdf"
+          target="_blank"
+          title="Vincent John Cagay's resume in PDF format"
+          >resume</a
+        >.
+      </p>
+      <p>
+        I am from the Philippines, but currently based in Japan. Let us meet
+        when you are here!
+      </p>
     </main>
   </body>
 </html>
